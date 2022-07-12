@@ -1,12 +1,18 @@
 Package: matrixr
-Title: What the Package Does (One Line, Title Case)
+Title: Mangrove Threat Index Calculator
 Version: 0.0.0.9000
 Authors@R: 
-    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"),
-           comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
-License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
-    license
+    person("Fabio", "favoretto", , "fabio@gocmarineprogram.com", role = c("aut", "cre"),
+           comment = c(ORCID = "0000-0002-6493-4254"))
+Description: The Mangrove Threat Index Calculator takes a spatial vector file representing habitat distribution of mangroves and it constructs a Threath index from a series of different threats. An example of threats are vector layers of agriculture, aquaculture, or urban development. All vector files can be prebuilt or can be drawn within QGIS and then used within the polygon. Threats should be reprented by separated files and should feature a column attribute reporting the name or ID of the threat. 
+License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.2.0
+Imports: 
+    dplyr,
+    geosphere,
+    rlang,
+    scales,
+    sf,
+    tidyr
