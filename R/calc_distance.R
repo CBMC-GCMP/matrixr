@@ -6,7 +6,7 @@
 #' @return spatial object form sf package
 #' @export
 #'
-#'@importFrom rlang .data
+#' @importFrom rlang .data
 #'
 #'
 #' @examples
@@ -32,4 +32,6 @@ calc_distance <- function(x) {
                           ID = 1:nrow(.data$centroid))
       distance <- sf::st_as_sf(distance,
                                coords = c("lon", "lat"),
-                               crs = 4326)}
+                               crs = 4326)
+      distance
+      }
