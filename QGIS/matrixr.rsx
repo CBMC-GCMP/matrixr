@@ -1,7 +1,7 @@
 ##mangrove threat index=group
 ##matrixr=name
 ##Layer=vector
-##FileList=optional multiple vector
+##Threats=optional multiple vector
 ##Attribute=string
 ##Output=output vector
 ##load_vector_using_rgdal
