@@ -30,6 +30,6 @@
 >      distance <- do.call(rbind, distance) |> as.data.frame() |> dplyr::select(-geometry) |> tidyr::pivot_wider(id_cols = ID, names_from = Threat, values_from = distance)
 >      mangrove <- cbind(mangrove, distance)
 >      mangrove$MTI <- rowMeans(dplyr::select(as.data.frame(mangrove), dplyr::starts_with("threat_")), na.rm = TRUE)
->      mangrove$MTI <- 1-scales::rescale(mangrove$MTI)
+>      mangrove$MTI_scaled <- 1-scales::rescale(mangrove$MTI)
 >
 >      Output <- sf::as_Spatial(mangrove)
